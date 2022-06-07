@@ -16,26 +16,26 @@ public class MainPage extends BasePage {
     private List<WebElement> product;
 
     public String getRandomProductName() {
-        String randomProductName =  getRandomElement(product).getText();
+        String randomProductName = getRandomElement(product).getText();
         return randomProductName;
     }
 
     @FindBy(css = ("#js-product-list .h3.product-title"))
-private WebElement searchResult;
+    private WebElement searchResult;
 
-    public String getSearchResultName(){
+    public String getSearchResultName() {
         return searchResult.getText();
     }
 
-  public MainPage clickFirstProductOnMainPage(){
+    public MainPage clickFirstProductOnMainPage() {
         click(product.get(0));
         return this;
-  }
+    }
 
     @FindBy(css = (".no-items"))
     private WebElement cartOverview;
 
-    public String getCartOverview(){
+    public String getCartOverview() {
         return cartOverview.getText();
     }
 }
